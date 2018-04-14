@@ -77,7 +77,8 @@ public class FlightBookingTest {
 
     private void setDriverPath() {
         if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
+            // changing the driver name
+            System.setProperty("webdriver.chrome.driver", "chromedriver_mac");
         }
         if (PlatformUtil.isWindows()) {
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");

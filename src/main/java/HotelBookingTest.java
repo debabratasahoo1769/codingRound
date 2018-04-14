@@ -27,6 +27,8 @@ public class HotelBookingTest {
         setDriverPath();
 
         driver.get("https://www.cleartrip.com/");
+        // initElements method of PageFactory will create all WebElements
+        PageFactory.initElements(driver, HotelBookingTest.class);
         hotelLink.click();
 
         localityTextBox.sendKeys("Indiranagar, Bangalore");

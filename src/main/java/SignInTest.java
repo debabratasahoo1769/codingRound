@@ -13,6 +13,8 @@ public class SignInTest {
     public void shouldThrowAnErrorIfSignInDetailsAreMissing() {
 
         setDriverPath();
+        
+        WebDriverWait wait=new WebDriverWait(driver, 5);
 
         driver.get("https://www.cleartrip.com/");
         waitFor(2000);
@@ -20,6 +22,11 @@ public class SignInTest {
         driver.findElement(By.linkText("Your trips")).click();
         driver.findElement(By.id("SignIn")).click();
 
+        //Switching to modal_window frame which has signInButton element
+        driver.switchTo().frame("modal_window");
+        //wait till element is visible 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signInButton")));
+        
         driver.findElement(By.id("signInButton")).click();
 
         String errors1 = driver.findElement(By.id("errors1")).getText();

@@ -37,7 +37,8 @@ public class SignInTest {
 
     private void setDriverPath() {
         if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
+            //changing chromdriver file name to updated chromedriver
+            System.setProperty("webdriver.chrome.driver", "chromedriver_mac");
         }
         if (PlatformUtil.isWindows()) {
             System.setProperty("webdriver.chrome.driver", "chromedriver.exe");

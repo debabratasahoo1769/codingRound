@@ -1,0 +1,11 @@
+#1  Renamed chromedriver for mac to to chromedriver_mac 
+
+- while executing on windows machine it was initialiizing chromedriver for mac
+
+#2	Corrected id for to-field to ToTag in FlightBookingTest.java
+
+- path for to-field was incorrect
+
+#3	added initElements of PageFactory to initializing the WebElements in HotelBookingTest.java
+
+#4 Switched to frame containg sign in form and explicitly waited till the element was visible in SignInTest.java
